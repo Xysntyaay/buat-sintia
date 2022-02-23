@@ -1,0 +1,100 @@
+<html>
+<meta charset='UTF-8' /><meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport' /><meta content='IE=edge' http-equiv='X-UA-Compatible' /><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet"><script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+<link href="https://foryou.likeadream.repl.co/style.css" rel="stylesheet" type="text/css" /><script src="https://foryou.likeadream.repl.co/script.js"></script>
+<head>
+    <!--
+    This code was made by FERDI!
+    Blog: https://sinkronin.com
+    Instagram: @fdi_ash
+    TikTok: @xxsmct_
+    Telegram: @XXXX
+    WhatsApp: 6289654717532
+    -->
+</head>
+<body>
+    <!-- Ganti Wallpaper --><style>
+        body {
+            background-image: url("https://i.top4top.io/p_2245aj4tw0.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 100% 100%;
+        }
+    </style>
+
+    <div id="konten">
+
+        <input class='chatMenu hidden' id='offchatMenu' type='checkbox' />
+        <div class='chatBox'>
+            <div id='data' class='chatContent'>
+
+                <div class='chatText'>
+                    <span id='text1'>hai, sintia</span>
+                    <span id='text2'>Sebenernya aku belum siap buat ngomong ini sama kamu, tapi ya mau gimana lagi dari pada aku pendem2 aja yakan,yang ada entar malah sakit.</span>
+                    <span id='text3'>mending langsung aku bilang aja sama kamu. jadi sekarang aku mau bilang sama kamu kalau aku itu SUKA SAMA KAMU,</span>
+                    <span id='text4'>jangan tanya kanapa aku bisa suka sama kamu karna aku ga punya alasan buat itu yang pada initinya AKU ITU SUKA SAMA KAMU.<br><br>jadi kamu mau gak jadi pacar aku?</span>
+                    <span id='typingsk' class='typing'>!!!di balas ya pesannya!!!</span>
+                    <span id='typingg' class='typing'>!!!Di balas ya pesannya!!!</span>
+                </div>
+            </div>
+
+            <a id="blscht" class='balasChat' onclick='bukaWa()'>
+                <span>Balas pesan...</span>
+            </a>
+        </div>
+
+        <div id="bodyblur">
+            <div id="foto">
+                <img src="https://i.postimg.cc/Xq4chqnH/IMG-20220223-114156-815.jpg" width="100px" height="100px" />
+            </div>
+            <div id="teksblur">
+                <span>OUR STORY~TERSIMPAN</span>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            //Opsi WhatsApp
+            function bukaWa() {
+                window.location =
+                "https://api.whatsapp.com/send?phone=6289654717532&text= " + "%0A%0A" + window.suka + "%0A%0A" + "*" + "Dikirim:" + "*" + "%20" + dateTime;
+            }
+
+            function play() {
+                //Link Audio Bisa Diganti
+                var audio = new Audio('https://f.top4top.io/m_2244vd7zf0.mp3');
+                audio.play();
+            }
+            var today = new Date(); var date = today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear()+'.'; var dateTime = date;
+            const swals = Swal.mixin({
+                allowOutsideClick: false,
+            });
+            async function mulai() {
+                await swals.fire('Hai kamu :)');
+                await swals.fire('Lihat ini sampai akhir ya :)');
+                setTimeout(teks0, 1200); setTimeout(check, 9000); setTimeout(teks1, 9000); play()
+            }
+            async function pertanyaan() {
+                var {
+                    isConfirmed: suka
+                } = await swals.fire({
+                        title: `Baca yang teliti yah:(`,
+                        confirmButtonText: 'okee',
+                        cancelButtonText: 'gak',
+                        allowOutsideClick: false,
+                        showCancelButton: true,
+                    });
+                if (suka) {
+                    window.suka = "iya aku mau jadi pacar kamu"
+                    document.getElementById('typingsk').style.display = "inline-block"; document.getElementById('typingsk').style.opacity = "1";
+                    scroll()
+                } else {
+                    window.suka = "Maaf Aku engga bisa :("
+                    document.getElementById('typingg').style.display = "inline-block"; document.getElementById('typingg').style.opacity = "1";
+                    scroll()
+                }
+                await swals.fire('Okee. Nanti klik balas pesan ya :)');
+                document.getElementById('blscht').style.display = "flex";
+            }
+            //Mulai
+            mulai()
+        </script>
+    </body>
+</html>
